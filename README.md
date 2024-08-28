@@ -16,13 +16,13 @@ This NetLogo model simulates the behavior of gardeners in a garden as they harve
 
 ### Parameters
 
-- `NofGardeners`: Number of gardeners in the simulation.
-- `fdSpeed`: Speed at which gardeners move.
-- `Eat`: Rate at which gardeners consume leaves.
-- `P1leaves`, `P2leaves`, `P3leaves`: Number of leaves generated in different areas of the garden.
-- `Closeness`, `Harvest`, `Close2HungryG`: Radius values that define the range within which gardeners detect leaves or interact with other gardeners.
-- `leafgift`: Number of leaves shared when a gardener encounters a hungry gardener.
-- `multiple`: Interval for creating new leaves.
+- `TotalGardeners`: Number of gardeners in the simulation.
+- `Velocity`: Speed at which gardeners move.
+- `Consumption`: Rate at which gardeners consume leaves.
+- `Area1`, `Area2`, `Area3`: Number of leaves generated in different garden areas.
+- `Dictection`, `Harvest`, `Proximity`: Radius values defining the range in which gardeners detect leaves or interact with other gardeners.
+- `Gift`: Number of leaves shared when a gardener encounters a hungry gardener.
+- `Interval`: Mutiple for creating new leaves.
 
 ### How to Run
 
