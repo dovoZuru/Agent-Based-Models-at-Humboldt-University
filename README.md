@@ -35,6 +35,58 @@ This NetLogo model simulates the behavior of gardeners in a garden as they harve
   - Set the `rule` variable to `"Commoning"` or `"Segregation"` before running the simulation.
   - The gardeners will adjust their movement patterns accordingly.
 
+### Weather Effects in the Simulation
+The code snippet defines two procedures, apply-weather-effects-in-com and apply-weather-effects-in-seg, to simulate the impact of different weather conditions on the behavior of two types of agents: leaves and gardeners. The weather conditions considered include "neutral", "sunny", "rainy", and "stormy". Each condition affects the agents differently in terms of movement, appearance, and resource management.
+
+1. apply-weather-effects-in-com
+This procedure applies weather effects in the "com" mode of the simulation. The weather conditions influence the following agent behaviors:
+
+Neutral Weather:
+
+Gardeners move at their normal speed (Velocity).
+Gardeners with leaves in their possession change color to 21 (a specific color code).
+Gardeners without leaves turn red.
+Sunny Weather:
+
+Leaves have an interval of 2.
+Gardeners with leaves move at their normal speed and change color to 21.
+Gardeners without leaves turn red.
+Gardeners are assigned additional attributes: Gift is set to 10, consumption to 1, and shareTime to 30.
+Rainy Weather:
+
+Leaves have an interval of 3.
+Gardeners move slower due to wet conditions, with their velocity halved (Velocity / 2).
+Gardeners with leaves change color to black, while those without leaves remain red.
+Gardeners have reduced Gift (set to 8), lower consumption (set to 0.8), and increased shareTime (set to 40).
+Stormy Weather:
+
+Leaves have an interval of 4.
+Gardeners move much slower, with their velocity reduced to one-tenth of the normal (Velocity / 10).
+Gardeners with leaves change color to violet, while those without leaves remain red.
+Gardeners experience further reduced Gift (set to 5), consumption (set to 0.5), and a longer shareTime (set to 60).
+2. apply-weather-effects-in-seg
+This procedure applies weather effects in the "seg" mode, which includes additional agent movement constraints within bounded areas. The agent behaviors under different weather conditions are as follows:
+
+Sunny Weather:
+
+Leaves have an interval of 2.
+Gardeners move within the specified bounds while avoiding walls.
+Gardeners with leaves move at their normal speed and change color to 21.
+Gardeners without leaves turn red.
+Gardeners have Gift set to 10, consumption to 1, and shareTime to 30.
+Rainy Weather (if leaves are in possession):
+
+Leaves have an interval of 3.
+Gardeners move within the specified bounds and slower due to wet conditions, with their velocity halved (Velocity / 2).
+Gardeners with leaves change color to black, while those without leaves remain red.
+Gardeners have Gift set to 8, consumption to 0.8, and shareTime to 40.
+Stormy Weather (if leaves are in possession):
+
+Leaves have an interval of 4.
+Gardeners move within the specified bounds and much slower, with their velocity reduced to one-tenth of the normal (Velocity / 10).
+Gardeners with leaves change color to violet, while those without leaves remain red.
+Gardeners have Gift set to 5, consumption to 0.5, and shareTime to 60.
+
 ### Key Procedures
 
 - `move`: Handles the movement of gardeners according to the selected rule.
