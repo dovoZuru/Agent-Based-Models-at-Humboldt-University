@@ -116,7 +116,7 @@ For any questions or support, please contact Favour Chizurum Onuoha at dovo.fav@
 
 # FEW MORE SCENARIOS AND IMPLEMENTATION... THE UNKNOWNS 😎
 
-✅ ### 1. **Weather Impact Scenario**
+### 1. **Weather Impact Scenario** ✅
    - **Scenario**: Introduce weather conditions that affect the availability of leaves and the movement speed of gardeners. For example, rain could decrease the number of leaves generated or slow down the gardeners, while sunshine could increase leaf growth and speed up the gardeners.
    - **Implementation**: Add a global variable for weather, and create conditions that alter leaf growth rates (`creating-leaves`) and gardener speed (`move`).
 
